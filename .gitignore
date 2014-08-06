@@ -31,3 +31,6 @@ pip-delete-this-directory.txt
 
 # Backup files
 *.bak*
+
+# Temporary files
+productive.csv
