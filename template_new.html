@@ -1,0 +1,13 @@
+<article>
+  <h2>Add new item</h2>
+  <form action="" method="post">
+    <input name="uri" id="uri" type="url" title="If you have no URL, use an URI like item:something" placeholder="http://" required autofocus><br>
+    <input name="title" id="title" type="text" placeholder="title" required>
+    <h3 id="timestamp">%(timestamp)s</h3>
+    <input type="hidden" name="oldnotes" value="">
+    <textarea name="newnotes" title="You may use Markdown syntax."placeholder="I'll just look at that later and see if it's really worth reading..."></textarea>
+    <p><label for="rating">How soon do you want to read further?</label></p>
+    <p id="ratingnames">never<input id="rating" name="rating" type="range" min="0" max="10" step="1" value="8" title="half actually means half probability">soon</p>
+    <input type="submit" id="submit" value="Submit">
+  </form>
+</article>

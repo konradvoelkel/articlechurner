@@ -1,0 +1,29 @@
+<article>
+  <script type="text/javascript">
+  <!--
+      function toggleedit() {
+          document.getElementById("displaytitle").style.display = "none";
+	  document.getElementById("edittitleuri").style.display = "block";
+	  document.getElementById("newnotes").required = "false";
+      }
+  //--->
+  </script>
+  <h2 id="displaytitle"><a href="%(uri)s">%(title)s</a><input type="submit" id="editlink" onclick="toggleedit()" value="(edit)"></h2>
+  <form action="" method="post">
+    <div id="edittitleuri" style="display:none">
+    <input type="url" name="uri" id="uri" value="%(uri)s" required><br>
+    <input type="text" name="title" id="title" value="%(title)s" required>
+    </div>
+    <p id="oldnotes">%(mdnotes)s</p>
+    <input type="hidden" name="oldnotes" value="%(notes)s">
+    <h3 id="timestamp">%(timestamp)s</h3>
+    <textarea name="newnotes" id="newnotes" title="You may use Markdown syntax."placeholder="After skimming again, I think ..." required autofocus></textarea>
+    <p><label for="rating">How soon do you want to read further?</label></p>
+    <p id="ratingnames">never<input id="rating" name="rating" type="range" min="0" max="10" step="1" value="%(rating)s" title="half actually means half probability">soon</p>
+    <input type="submit" id="submit" value="Submit">
+  </form>
+  <form action="/killsingle/" method="post">
+    <input type="hidden" name="killuri" value="%(uri)s">
+    <input type="submit" id="kill" value="Remove this item from database">
+  </form>
+</article>

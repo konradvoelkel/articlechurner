@@ -1,0 +1,21 @@
+<article>
+  <h2>Menu</h2>
+  <ul id="menu">
+    <li><a href="/single/">Get random item</a></li>
+    <li><a href="/edit/">Input new item</a></li>
+    <li>Search: <form action="/search/" method="get">
+	<input name="q" id="q" type="text" placeholder="query">
+	<input name="markdown" id="markdown" type="checkbox" value="1" checked="checked"><label for="markdown">render markdown?</label><br>
+	<label for="rating">rated at least</label><input name="minrating" id="minrating" type="range" min="0" max="10" step="1" value="0"><br>
+	<label for="rating">and at most</label><input name="maxrating" id="maxrating" type="range" min="0" max="10" step="1" value="10"><br>
+	<input type="submit" id="search" value="Search">
+      </form></li>
+    <!---
+    <li><a href="/search/q=">Show all unfinished items</a></li>
+    <li><a href="/archive/">Archive of finished items</a></li>
+    <li><form action="/killarchive/" method="post">
+	<input type="submit" id="kill" value="Remove all finished items">
+      </form></li>
+    --->
+  </ul>
+</article>

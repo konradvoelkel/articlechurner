@@ -1,0 +1,10 @@
+<article>
+  <h2><a href="%(uri)s">%(title)s</a></h2>
+  <p id="oldnotes">%(mdnotes)s</p>
+  <p id="rawnotes">%(notes)s</p>
+  <p id="ratingnames"><input id="rating" name="rating" type="range" min="0" max="10" step="1" value="%(rating)s" title="half actually means half probability" readonly></p>
+  <form action="/edit/" method="get">
+    <input type="hidden" name="uri" value="%(uri)s">
+    <input type="submit" id="edit" value="Edit this item">
+  </form>
+</article>
